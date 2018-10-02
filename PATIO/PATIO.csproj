@@ -1,0 +1,737 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FBFEE52E-9924-4A1C-A5C2-31896B854A1D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PATIO</RootNamespace>
+    <AssemblyName>PATIO</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>e:\packages\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationVersion>2.0.39.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CF5F3502E25CEC855C1C9A84AAB40ECE6BFED716</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>PATIO_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ICON.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accordion">
+      <HintPath>..\..\Composants\DLL\Accordion.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\Composants\DLL\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PdfSharp, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.32.3057.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\PDFsharp.1.32.3057.0\lib\net20\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.4.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DLL\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\AccesNet.cs" />
+    <Compile Include="Classes\Attribut.cs" />
+    <Compile Include="Classes\dElement.cs" />
+    <Compile Include="Classes\Element.cs" />
+    <Compile Include="Classes\Lien.cs" />
+    <Compile Include="Classes\Parametre.cs" />
+    <Compile Include="Classes\table_valeur.cs" />
+    <Compile Include="Classes\TypeElement.cs" />
+    <Compile Include="Interfaces\ctrlAdminParam.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlAdminParam.Designer.cs">
+      <DependentUpon>ctrlAdminParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlChoixListe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlChoixListe.Designer.cs">
+      <DependentUpon>ctrlChoixListe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlCorrectif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlCorrectif.Designer.cs">
+      <DependentUpon>ctrlCorrectif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionDirection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionDirection.Designer.cs">
+      <DependentUpon>ctrlEditionDirection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionPlan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionPlan.Designer.cs">
+      <DependentUpon>ctrlEditionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionStat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionStat.Designer.cs">
+      <DependentUpon>ctrlEditionStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionTerritoire.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlEditionTerritoire.Designer.cs">
+      <DependentUpon>ctrlEditionTerritoire.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlFicheAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlFicheAction.Designer.cs">
+      <DependentUpon>ctrlFicheAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlFicheObjectif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlFicheObjectif.Designer.cs">
+      <DependentUpon>ctrlFicheObjectif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlPlanCorrection.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlPlanCorrection.Designer.cs">
+      <DependentUpon>ctrlPlanCorrection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlReporting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlReporting.Designer.cs">
+      <DependentUpon>ctrlReporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmAttribut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmAttribut.Designer.cs">
+      <DependentUpon>frmAttribut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmChoix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmChoix.Designer.cs">
+      <DependentUpon>frmChoix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmParametre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmParametre.Designer.cs">
+      <DependentUpon>frmParametre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmTableValeur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmTableValeur.Designer.cs">
+      <DependentUpon>frmTableValeur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Utilisateur.cs" />
+    <Compile Include="ctrlAccueil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ctrlAccueil.Designer.cs">
+      <DependentUpon>ctrlAccueil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlAdmin.Designer.cs">
+      <DependentUpon>ctrlAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlConsole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlConsole.Designer.cs">
+      <DependentUpon>ctrlConsole.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlExport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlExport.Designer.cs">
+      <DependentUpon>ctrlExport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlGroupe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlGroupe.Designer.cs">
+      <DependentUpon>ctrlGroupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlImport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlImport.Designer.cs">
+      <DependentUpon>ctrlImport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlXWiki.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlXWiki.Designer.cs">
+      <DependentUpon>ctrlXWiki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlIndicateur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlIndicateur.Designer.cs">
+      <DependentUpon>ctrlIndicateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeAction.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeAction.Designer.cs">
+      <DependentUpon>ctrlListeAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeGroupe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeGroupe.Designer.cs">
+      <DependentUpon>ctrlListeGroupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeIndicateur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeIndicateur.Designer.cs">
+      <DependentUpon>ctrlListeIndicateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeObjectif.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeObjectif.Designer.cs">
+      <DependentUpon>ctrlListeObjectif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListePlan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListePlan.Designer.cs">
+      <DependentUpon>ctrlListePlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeUtilisateur.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlListeUtilisateur.Designer.cs">
+      <DependentUpon>ctrlListeUtilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlPlan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlPlan.Designer.cs">
+      <DependentUpon>ctrlPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ctrlWeb.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\ctrlWeb.Designer.cs">
+      <DependentUpon>ctrlWeb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\EditionFiche.cs" />
+    <Compile Include="Modules\Export_6PO.cs" />
+    <Compile Include="Modules\Fonctions.cs" />
+    <Compile Include="Interfaces\frmGroupe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmGroupe.Designer.cs">
+      <DependentUpon>frmGroupe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmIndicateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmIndicateur.Designer.cs">
+      <DependentUpon>frmIndicateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmPlan.Designer.cs">
+      <DependentUpon>frmPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\frmUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\frmUser.Designer.cs">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\GestionPlan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Interfaces\GestionPlan.Designer.cs">
+      <DependentUpon>GestionPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Enum.cs" />
+    <Compile Include="Classes\Groupe.cs" />
+    <Compile Include="Classes\Indicateur.cs" />
+    <Compile Include="Classes\Action.cs" />
+    <Compile Include="Classes\Objectif.cs" />
+    <Compile Include="Classes\Plan.cs" />
+    <Compile Include="Modules\ClassePHP.cs" />
+    <Compile Include="Modules\pdf.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ctrlAccueil.resx">
+      <DependentUpon>ctrlAccueil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlAdmin.resx">
+      <DependentUpon>ctrlAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlAdminParam.resx">
+      <DependentUpon>ctrlAdminParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlChoixListe.resx">
+      <DependentUpon>ctrlChoixListe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlConsole.resx">
+      <DependentUpon>ctrlConsole.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlCorrectif.resx">
+      <DependentUpon>ctrlCorrectif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlEditionDirection.resx">
+      <DependentUpon>ctrlEditionDirection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlEditionPlan.resx">
+      <DependentUpon>ctrlEditionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlEditionStat.resx">
+      <DependentUpon>ctrlEditionStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlEditionTerritoire.resx">
+      <DependentUpon>ctrlEditionTerritoire.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlExport.resx">
+      <DependentUpon>ctrlExport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlFicheAction.resx">
+      <DependentUpon>ctrlFicheAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlFicheObjectif.resx">
+      <DependentUpon>ctrlFicheObjectif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlGroupe.resx">
+      <DependentUpon>ctrlGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlImport.resx">
+      <DependentUpon>ctrlImport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlPlanCorrection.resx">
+      <DependentUpon>ctrlPlanCorrection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlReporting.resx">
+      <DependentUpon>ctrlReporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlXWiki.resx">
+      <DependentUpon>ctrlXWiki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListeAction.resx">
+      <DependentUpon>ctrlListeAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListeGroupe.resx">
+      <DependentUpon>ctrlListeGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListeIndicateur.resx">
+      <DependentUpon>ctrlListeIndicateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListeObjectif.resx">
+      <DependentUpon>ctrlListeObjectif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListePlan.resx">
+      <DependentUpon>ctrlListePlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlListeUtilisateur.resx">
+      <DependentUpon>ctrlListeUtilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlPlan.resx">
+      <DependentUpon>ctrlPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\ctrlWeb.resx">
+      <DependentUpon>ctrlWeb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmAttribut.resx">
+      <DependentUpon>frmAttribut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmChoix.resx">
+      <DependentUpon>frmChoix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmGroupe.resx">
+      <DependentUpon>frmGroupe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmIndicateur.resx">
+      <DependentUpon>frmIndicateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmParametre.resx">
+      <DependentUpon>frmParametre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmPlan.resx">
+      <DependentUpon>frmPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmTableValeur.resx">
+      <DependentUpon>frmTableValeur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\frmUser.resx">
+      <DependentUpon>frmUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\GestionPlan.resx">
+      <DependentUpon>GestionPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Doc\Document de suivi PATIO.docx" />
+    <None Include="packages.config" />
+    <None Include="PATIO_TemporaryKey.pfx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info001.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\INTV.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maj.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SP_D.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vidon.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\xp180.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_plus.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CASE1A.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ELEM_M.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ELEM_P.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ico_catastuces_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\precedent.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\suivant.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\app-nortonsystemworks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Desktop3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_admin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_calendrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Administrative Tools .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Folder .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FON .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\a0003.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fleche-verte-icone-9382-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squares_2.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\squares_1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle_0.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bullet_vert_20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\all_add_symbol_unselect.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_carre_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_cercle_jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_losange_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_rouge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_vert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_violet.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_bleu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_jaune.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_triangle_orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1g-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1g-7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1g-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1g-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3bw.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Admin_-_User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_administration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_calendrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_parametre.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_edition.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ICON.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus_o.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICON.ico" />
+    <None Include="Resources\direction.png" />
+    <None Include="Resources\Performance.png" />
+    <None Include="Resources\panneau.png" />
+    <None Include="Resources\hdf.png" />
+    <None Include="Resources\Globe.png" />
+    <None Include="Resources\27008-Elquebrado-AeroGlobe.png" />
+    <None Include="Resources\Performance2.png" />
+    <None Include="Resources\ksysguard.png" />
+    <None Include="Resources\apercu.gif" />
+    <None Include="Resources\squares_0_hl.gif" />
+    <None Include="Resources\bullet.jpg" />
+    <None Include="Resources\gsr.jpg" />
+    <None Include="Resources\ico_catastuces_2.png" />
+    <None Include="Resources\page_web.png" />
+    <None Include="Resources\report01.png" />
+    <None Include="Resources\Documents_Folder.png" />
+    <None Include="Resources\3d-cube.gif" />
+    <None Include="Resources\export1.gif" />
+    <None Include="Resources\dossier.gif" />
+    <None Include="Resources\Pilote.png" />
+    <None Include="Resources\Administrateur.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DataSources\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
